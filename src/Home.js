@@ -25,6 +25,23 @@ const Home = () => {
         <br />
         Welcome to My page!
       </h1>
+      <div className="s-about">
+        <a className="social-btn" href="https://github.com/RizaHariati">
+          <i className="fa fa-github-square"></i>
+        </a>
+        <a
+          className="social-btn"
+          href="https://www.instagram.com/rizahariati/?hl=en"
+        >
+          <i className="fa fa-instagram"></i>
+        </a>
+        <a
+          className="social-btn"
+          href="https://www.linkedin.com/in/riza-hariati-2021/"
+        >
+          <i className="fa fa-linkedin"></i>
+        </a>
+      </div>
     </div>
   );
 };

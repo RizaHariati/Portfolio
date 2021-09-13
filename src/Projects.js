@@ -41,7 +41,7 @@ const Projects = () => {
               </div>
               <div className="p-info">
                 <h3 className="p-name">{title}</h3>
-                <h4 className="type">{type}</h4>
+                <h4 className="type">Type : {type}</h4>
 
                 <ul>
                   {tools.map((tool, index) => {

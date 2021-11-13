@@ -3,9 +3,8 @@ import React, { useState, useContext, useRef } from "react";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [theme, setTheme] = useState("light-mode");
+  const [theme, setTheme] = useState("dark-mode");
   const refHome = useRef(null);
-  const refProjects = useRef(null);
   const refAbout = useRef(null);
 
   const toggleMode = (e) => {
@@ -21,31 +20,21 @@ const AppProvider = ({ children }) => {
     document.documentElement.classList = theme;
   };
   const homeOn = () => {
-    refHome.current.style.textAlign = "right";
-    refProjects.current.style.textAlign = "left";
-    refAbout.current.style.textAlign = "left";
-  };
-
-  const projectOn = () => {
-    refHome.current.style.textAlign = "left";
-    refProjects.current.style.textAlign = "right";
-    refAbout.current.style.textAlign = "left";
+    refHome.current.style.fontWeight = "600";
+    refAbout.current.style.fontWeight = "300";
   };
 
   const aboutOn = () => {
-    refHome.current.style.textAlign = "left";
-    refProjects.current.style.textAlign = "left";
-    refAbout.current.style.textAlign = "right";
+    refHome.current.style.fontWeight = "300";
+    refAbout.current.style.fontWeight = "600";
   };
   return (
     <AppContext.Provider
       value={{
         toggleMode,
         refHome,
-        refProjects,
         refAbout,
         homeOn,
-        projectOn,
         aboutOn,
       }}
     >

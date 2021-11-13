@@ -2,38 +2,40 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./Home";
-import Projects from "./Projects";
+import ProjectDetail from "./ProjectDetail";
 import About from "./About";
-import Mode from "./Mode";
+
 const App = () => {
   return (
-    <Router className="main-document">
-      <div className="background-img">
-        <img src="/assets/images/johannes_plenio.jpg" alt="background" />
-        <div className="color"></div>
-      </div>
-      <div className="container">
-        <Mode />
+    <div className="main-container">
+      <Router>
+        <div className="main-background">
+          <img src="/assets/images/johannes_plenio.jpg" alt="main-background" />
+          <div className="color"></div>
+        </div>
+
         <Navbar />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/projects">
-            <Projects />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          {/* <Route path="*">
+        <div className="content-container">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/project/:siteID">
+              <ProjectDetail />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            {/* <Route path="*">
           <Error/>
         </Route> */}
-        </Switch>
-      </div>
-      <footer className="footer">
-        background design by johannes plenio from pexels
-      </footer>
-    </Router>
+          </Switch>
+        </div>
+        <footer className="footer">
+          <h5> background design by johannes plenio from pexels</h5>
+        </footer>
+      </Router>
+    </div>
   );
 };
 

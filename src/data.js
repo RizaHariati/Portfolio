@@ -1,48 +1,27 @@
 const projects = [
   {
-    id: 0,
-    url: "Web1.jpg",
+    id: "azri001",
+    url: "https://rsuripsumoharjo-mockup.netlify.app/",
     type: "Website",
-    title: "RS.Urip Sumoharjo",
-    tools: ["Javascript", "Html/CSS", "ReactJS"],
-    website: "https://rsuripsumoharjo-mockup.netlify.app/",
+    title: "RS. Urip Sumoharjo",
+    text: [
+      "A website design for a local hospital in Bandar Lampung. Inspired by Mayo Clinic's website. A very simple design, easy-to-use, informative but not too crowded with too many useless details",
+      " The core of this website design is ReactJS, supported by Formik, react-router-DOM, and Yup",
+    ],
+    images: ["urip-website", "urip-tablet", "urip-phone"],
   },
   {
-    id: 1,
-    url: "Web2.jpg",
+    id: "azri002",
+    url: "https://azribook.netlify.app/",
     type: "Website",
-    title: "Toko Kelontong",
-    tools: ["Javascript", "Html/CSS", "ReactJS"],
-    website: "https://rsuripsumoharjo-mockup.netlify.app/",
+    title: "Azribook",
+    text: [
+      "This website is based on Facebook’s website design, to showcase my ability in accessing and processing data with Rest API ",
+      "The data is thansk to Dummyapi.io for providing free ready to use API Service full with dummy data ",
+      " I’m using React JS as the core of this web design with the help of Axios, Figma, and React router DOM ",
+    ],
+    images: ["azribook-website", "azribook-tablet", "azribook-phone"],
   },
-  // {
-  //   id: 2,
-  //   url: "Web3.jpg",
-  //   type: "Website",
-  //   title: "Mitra Amanah Travelindo",
-  //   tools: ["Javascript", "Html/CSS", "ReactJS"],
-  // },
-  // {
-  //   id: 3,
-  //   url: "Web4.jpg",
-  //   type: "Website",
-  //   title: "PaceBook",
-  //   tools: ["Javascript", "Html/CSS", "ReactJS"],
-  // },
-  // {
-  //   id: 4,
-  //   url: "App1.jpg",
-  //   type: "App",
-  //   title: "Medical Record",
-  //   tools: ["Java", "Netbeans", "MySQL"],
-  // },
-  // {
-  //   id: 5,
-  //   url: "App2.jpg",
-  //   type: "App",
-  //   title: "Student Management",
-  //   tools: ["Java", "Netbeans", "MySQL"],
-  // },
 ];
 
 export { projects };

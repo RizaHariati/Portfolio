@@ -680,6 +680,9 @@ p {
     top: 5rem;
     border-radius: 0.5rem;
     width: calc(100vw - 2rem);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     background-color: #0c2a3a;
     z-index: 2;
     padding: 1rem;
@@ -726,7 +729,7 @@ p {
     text-align: right;
     width: 100%;
     font-size: 16px;
-    line-height: 18px;
+    line-height: 35px;
     letter-spacing: 0.5px;
     border-bottom: 1px solid #dfdbd3;
     font-weight: 300px;
@@ -741,6 +744,9 @@ p {
   }
   .submenu-sublink p {
     text-align: right;
+    line-height: 35px;
+    letter-spacing: 1px;
+    font-size: 13px;
   }
   .pages {
     display: none;

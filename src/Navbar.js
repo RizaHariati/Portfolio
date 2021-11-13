@@ -79,17 +79,21 @@ const Navbar = () => {
           <p>powered by ReactJS</p>
         </div>
       </div>
-      {showSubmenu && <Submenu />}
+      {showSubmenu && <Submenu setShowSubmenu={setShowSubmenu} />}
     </nav>
   );
 };
 
 export default Navbar;
 
-const Submenu = () => {
+const Submenu = ({ setShowSubmenu }) => {
   return (
     <div className="submenu-container">
-      <Link to="/" className="submenu-link">
+      <Link
+        to="/"
+        className="submenu-link"
+        onClick={() => setShowSubmenu(false)}
+      >
         <h3>home</h3>
       </Link>
       <div className="submenu-link">
@@ -98,14 +102,22 @@ const Submenu = () => {
           {projects.map((project) => {
             const { id, title } = project;
             return (
-              <Link to={`/project/${id}`} key={id}>
-                <p>{title}</p>
+              <Link
+                to={`/project/${id}`}
+                key={id}
+                onClick={() => setShowSubmenu(false)}
+              >
+                <p>{title} &#8226;</p>
               </Link>
             );
           })}
         </div>
       </div>
-      <Link to="/about" className="submenu-link">
+      <Link
+        to="/about"
+        className="submenu-link"
+        onClick={() => setShowSubmenu(false)}
+      >
         <h3>about</h3>
       </Link>
     </div>

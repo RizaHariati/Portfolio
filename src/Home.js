@@ -49,7 +49,7 @@ const Projects = () => {
             rel="noreferrer"
           >
             <div className="project-link-btn">
-              <img src={`${imageAddress}Web1.jpg`} alt="Web1" />
+              <img src={`${imageAddress}Web1.png`} alt="Web1" />
               <h3>Go to page...</h3>
             </div>
           </a>
@@ -70,7 +70,7 @@ const Projects = () => {
             rel="noreferrer"
           >
             <div className="project-link-btn">
-              <img src={`${imageAddress}Web2.jpg`} alt="Web2" />
+              <img src={`${imageAddress}Web2.png`} alt="Web2" />
               <h3>Go to page...</h3>
             </div>
           </a>

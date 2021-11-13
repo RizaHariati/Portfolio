@@ -62,7 +62,7 @@ const Projects = () => {
               <img
                 className={`images img-${index}`}
                 key={index}
-                src={`${imageAddress}${image}.jpg`}
+                src={`${imageAddress}${image}.png`}
                 alt="web3"
               />
             );

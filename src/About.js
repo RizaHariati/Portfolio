@@ -3,12 +3,12 @@ import { useHistory } from "react-router";
 import { useGlobalContext } from "./context";
 
 const About = () => {
-  const { homeOn } = useGlobalContext();
+  const { projectOn } = useGlobalContext();
   const history = useHistory();
   const handlewheel = (e) => {
     if (e.deltaY < 0) {
-      history.push("/");
-      homeOn();
+      history.push("/project/azri001");
+      projectOn();
     }
   };
   return (

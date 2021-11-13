@@ -4,12 +4,12 @@ import { useHistory } from "react-router";
 import { useGlobalContext } from "./context";
 const imageAddress = "/assets/images/";
 const Home = () => {
-  const { aboutOn } = useGlobalContext();
+  const { projectOn } = useGlobalContext();
   const history = useHistory();
   const handlewheel = (e) => {
     if (e.deltaY > 0) {
-      history.push("/about");
-      aboutOn();
+      history.push("/project/azri001");
+      projectOn();
     }
   };
   return (

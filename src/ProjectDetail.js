@@ -60,7 +60,7 @@ const Projects = () => {
           {images.map((image, index) => {
             return (
               <img
-                className="images"
+                className={`images img-${index}`}
                 key={index}
                 src={`${imageAddress}${image}.jpg`}
                 alt="web3"

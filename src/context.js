@@ -3,39 +3,42 @@ import React, { useState, useContext, useRef } from "react";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [theme, setTheme] = useState("dark-mode");
+  const [projectMenu, setProjectMenu] = useState(false);
+
   const refHome = useRef(null);
   const refAbout = useRef(null);
+  const refProject = useRef(null);
 
-  const toggleMode = (e) => {
-    e.preventDefault();
-
-    if (theme === "dark-mode") {
-      setTheme("light-mode");
-      e.target.style.left = "50%";
-    } else {
-      setTheme("dark-mode");
-      e.target.style.left = "0";
-    }
-    document.documentElement.classList = theme;
-  };
   const homeOn = () => {
-    refHome.current.style.fontWeight = "600";
+    setProjectMenu(false);
+    refHome.current.style.fontWeight = "700";
+    refAbout.current.style.fontWeight = "300";
+    refProject.current.style.fontWeight = "300";
+  };
+
+  const projectOn = () => {
+    setProjectMenu(true);
+    refProject.current.style.fontWeight = "700";
+    refHome.current.style.fontWeight = "300";
     refAbout.current.style.fontWeight = "300";
   };
-
   const aboutOn = () => {
+    setProjectMenu(false);
     refHome.current.style.fontWeight = "300";
-    refAbout.current.style.fontWeight = "600";
+    refAbout.current.style.fontWeight = "700";
+    refProject.current.style.fontWeight = "300";
   };
   return (
     <AppContext.Provider
       value={{
-        toggleMode,
+        projectMenu,
         refHome,
         refAbout,
+        refProject,
         homeOn,
         aboutOn,
+        projectOn,
+        setProjectMenu,
       }}
     >
       {children}
